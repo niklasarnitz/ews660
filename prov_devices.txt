@@ -1,0 +1,15 @@
+Character devices:
+  1 mem
+  4 ttyS
+  5 /dev/tty
+  5 /dev/console
+  5 /dev/ptmx
+ 10 misc
+ 90 mtd
+128 ptm
+136 pts
+254 ttyATH
+
+Block devices:
+259 blkext
+ 31 mtdblock

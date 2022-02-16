@@ -1,0 +1,1 @@
+board=EWS660AP console=ttyS0,115200 mtdparts=spi0.0:256k(u-boot),64k(u-boot-env),320k(custom),1536k(kernel),11584k(rootfs),2560k(failsafe),64k(ART),13120k@0xa0000(firmware) rootfstype=squashfs,yaffs,jffs2 noinitrd

@@ -1,0 +1,2 @@
+ag71xx-mdio.0     ag71xx.1          ar724x-pci.0      ath79-spi         gpio-keys-polled  qca955x_wmac      serial8250.0
+ag71xx.0          alarmtimer        ar724x-pci.1      ath79-wdt         leds-gpio         serial8250        uevent

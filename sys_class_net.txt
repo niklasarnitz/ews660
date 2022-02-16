@@ -1,0 +1,1 @@
+ath0    ath1    br-lan  eth0    eth1    ifb0    ifb1    lo      teql0   wifi0   wifi1

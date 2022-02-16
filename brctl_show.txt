@@ -1,0 +1,5 @@
+bridge name	bridge id		STP enabled	interfaces
+br-lan		8000.88dc968095bc	no		eth0
+							eth1
+							ath1
+							ath0

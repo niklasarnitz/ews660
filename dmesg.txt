@@ -1,0 +1,757 @@
+[    0.000000] Linux version 3.3.8 (root@marine-ubuntu1604) (gcc version 4.6.3 20120201 (prerelease) (Linaro GCC 4.6-2012.02) ) #1 Thu Sep 20 14:53:21 CST 2018
+[    0.000000] MyLoader: sysp=00000000, boardp=00000000, parts=00000100
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU revision is: 00019750 (MIPS 74Kc)
+[    0.000000] SoC: Qualcomm Atheros QCA9558 rev 0
+[    0.000000] Clocks: CPU:720.000MHz, DDR:600.000MHz, AHB:240.000MHz, Ref:40.000MHz
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone PFN ranges:
+[    0.000000]   Normal   0x00000000 -> 0x00008000
+[    0.000000] Movable zone start PFN for each node
+[    0.000000] Early memory PFN ranges
+[    0.000000]     0: 0x00000000 -> 0x00008000
+[    0.000000] On node 0 totalpages: 32768
+[    0.000000] free_area_init_node: node 0, pgdat 80321390, node_mem_map 81000000
+[    0.000000]   Normal zone: 256 pages used for memmap
+[    0.000000]   Normal zone: 0 pages reserved
+[    0.000000]   Normal zone: 32512 pages, LIFO batch:7
+[    0.000000] pcpu-alloc: s0 r0 d32768 u32768 alloc=1*32768
+[    0.000000] pcpu-alloc: [0] 0
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line:  board=EWS660AP console=ttyS0,115200 mtdparts=spi0.0:256k(u-boot),64k(u-boot-env),320k(custom),1536k(kernel),11584k(rootfs),2560k(failsafe),64k(ART),13120k@0xa0000(firmware) rootfstype=squashfs,yaffs,jffs2 noinitrd
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Primary instruction cache 64kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, VIPT, cache aliases, linesize 32 bytes
+[    0.000000] Writing ErrCtl register=00000000
+[    0.000000] Readback ErrCtl register=00000000
+[    0.000000] Memory: 126272k/131072k available (2233k kernel code, 4800k reserved, 589k data, 212k init, 0k highmem)
+[    0.000000] SLUB: Genslabs=9, HWalign=32, Order=0-3, MinObjects=0, CPUs=1, Nodes=1
+[    0.000000] NR_IRQS:51
+[    0.000000] Calibrating delay loop... 358.80 BogoMIPS (lpj=1794048)
+[    0.060000] pid_max: default: 32768 minimum: 301
+[    0.060000] Mount-cache hash table entries: 512
+[    0.070000] Initialized recycle list for cpu 0.
+[    0.070000] NET: Registered protocol family 16
+[    0.080000] gpiochip_add: registered GPIOs 0 to 23 on device: ath79
+[    0.080000] MIPS: machine is Senao EWS660AP
+[    0.090000] ar724x-pci ar724x-pci.0: PCIe link is down
+[    0.100000] registering PCI controller with io_map_base unset
+[    0.100000] registering PCI controller with io_map_base unset
+[    0.510000] bio: create slab <bio-0> at 0
+[    0.520000] PCI host bridge to bus 0000:00
+[    0.520000] pci_bus 0000:00: root bus resource [mem 0x10000000-0x11ffffff]
+[    0.530000] pci_bus 0000:00: root bus resource [io  0x0000]
+[    0.530000] PCI host bridge to bus 0000:01
+[    0.530000] pci_bus 0000:01: root bus resource [mem 0x12000000-0x13ffffff]
+[    0.540000] pci_bus 0000:01: root bus resource [io  0x0001]
+[    0.540000] pci 0000:01:00.0: [168c:003c] type 0 class 0x000280
+[    0.540000] pci 0000:01:00.0: invalid calibration data
+[    0.550000] pci 0000:01:00.0: reg 10: [mem 0x00000000-0x001fffff 64bit]
+[    0.550000] pci 0000:01:00.0: reg 30: [mem 0x00000000-0x0000ffff pref]
+[    0.550000] pci 0000:01:00.0: supports D1
+[    0.550000] pci 0000:01:00.0: PME# supported from D0 D1 D3hot
+[    0.550000] pci 0000:01:00.0: BAR 0: assigned [mem 0x12000000-0x121fffff 64bit]
+[    0.550000] pci 0000:01:00.0: BAR 6: assigned [mem 0x12200000-0x1220ffff pref]
+[    0.560000] pci 0000:01:00.0: using irq 41 for pin 1
+[    0.560000] Switching to clocksource MIPS
+[    0.570000] NET: Registered protocol family 2
+[    0.570000] IP route cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.570000] TCP established hash table entries: 4096 (order: 3, 32768 bytes)
+[    0.580000] TCP bind hash table entries: 4096 (order: 2, 16384 bytes)
+[    0.580000] TCP: Hash tables configured (established 4096 bind 4096)
+[    0.590000] TCP reno registered
+[    0.590000] UDP hash table entries: 256 (order: 0, 4096 bytes)
+[    0.600000] UDP-Lite hash table entries: 256 (order: 0, 4096 bytes)
+[    0.600000] NET: Registered protocol family 1
+[    0.610000] PCI: CLS 0 bytes, default 32
+[    0.620000] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    0.620000] JFFS2 version 2.2 (NAND) (SUMMARY) (ZLIB) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    0.630000] msgmni has been set to 246
+[    0.640000] io scheduler noop registered
+[    0.640000] io scheduler deadline registered (default)
+[    0.650000] Serial: 8250/16550 driver, 1 ports, IRQ sharing disabled
+[    0.670000] serial8250.0: ttyS0 at MMIO 0x18020000 (irq = 11) is a 16550A
+[    0.680000] console [ttyS0] enabled, bootconsole disabled
+[    0.690000] m25p80 spi0.0: found mx25l12805d, expected m25p80
+[    0.700000] m25p80 spi0.0: mx25l12805d (16384 Kbytes)
+[    0.710000] 8 cmdlinepart partitions found on MTD device spi0.0
+[    0.710000] Creating 8 MTD partitions on "spi0.0":
+[    0.720000] 0x000000000000-0x000000040000 : "u-boot"
+[    0.720000] 0x000000040000-0x000000050000 : "u-boot-env"
+[    0.730000] 0x000000050000-0x0000000a0000 : "custom"
+[    0.730000] 0x0000000a0000-0x000000220000 : "kernel"
+[    0.740000] 0x000000220000-0x000000d70000 : "rootfs"
+[    0.750000] mtd: partition "rootfs" set to be root filesystem
+[    0.750000] mtd: partition "rootfs_data" created automatically, ofs=B80000, len=1F0000
+[    0.760000] 0x000000b80000-0x000000d70000 : "rootfs_data"
+[    0.770000] 0x000000d70000-0x000000ff0000 : "failsafe"
+[    0.770000] 0x000000ff0000-0x000001000000 : "ART"
+[    0.780000] 0x0000000a0000-0x000000d70000 : "firmware"
+[    0.790000] /proc/Lan_Led created
+[    0.810000] ag71xx_mdio: probed
+[    0.810000] eth0: Atheros AG71xx at 0xb9000000, irq 4
+[    1.370000] ag71xx ag71xx.0: eth0: connected to PHY at ag71xx-mdio.0:01 [uid=004dd072, driver=Generic PHY]
+[    1.380000] eth1: Atheros AG71xx at 0xba000000, irq 5
+[    1.930000] ag71xx ag71xx.1: eth1: connected to PHY at ag71xx-mdio.0:02 [uid=004dd074, driver=Generic PHY]
+[    1.940000] GACT probability on
+[    1.950000] Mirror/redirect action on
+[    1.950000] u32 classifier
+[    1.950000]     Performance counters on
+[    1.960000]     input device check on
+[    1.960000]     Actions configured
+[    1.960000] ip_tables: (C) 2000-2006 Netfilter Core Team
+[    1.970000] TCP bic registered
+[    1.970000] TCP cubic registered
+[    1.970000] TCP westwood registered
+[    1.980000] TCP highspeed registered
+[    1.980000] TCP hybla registered
+[    1.990000] TCP htcp registered
+[    1.990000] TCP vegas registered
+[    1.990000] TCP veno registered
+[    1.990000] TCP scalable registered
+[    2.000000] TCP lp registered
+[    2.000000] TCP yeah registered
+[    2.000000] TCP illinois registered
+[    2.010000] NET: Registered protocol family 17
+[    2.010000] Bridge firewalling registered
+[    2.020000] 8021q: 802.1Q VLAN Support v1.8
+[    2.030000] VFS: Mounted root (squashfs filesystem) readonly on device 31:4.
+[    2.030000] Freeing unused kernel memory: 212k freed
+[    3.800000] Registered led device: wlan_2g_led
+[    3.800000] Registered led device: wlan_5g_led
+[    3.980000] JFFS2 notice: (439) jffs2_build_xattr_subsystem: complete building xattr subsystem, 2 of xdatum (1 unchecked, 1 orphan) and 81 of xref (0 dead, 46 orphan) found.
+[    4.560000] JFFS2 notice: (473) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[    7.950000] NET: Registered protocol family 10
+[    7.960000] tun: Universal TUN/TAP device driver, 1.6
+[    7.970000] tun: (C) 1999-2004 Max Krasnyansky <maxk@qualcomm.com>
+[    7.970000] mem_manager: module license 'unspecified' taints kernel.
+[    7.980000] Disabling lock debugging due to kernel taint
+[    7.990000] ath_dfs: Version 2.0.0
+[    7.990000] Copyright (c) 2005-2006 Atheros Communications, Inc. All Rights Reserved
+[    8.010000] ath_spectral: Version 2.0.0
+[    8.010000] Copyright (c) 2005-2009 Atheros Communications, Inc. All Rights Reserved
+[    8.640000] ath_hal: 0.9.17.1 (AR5416, AR9380, REGOPS_FUNC, PRIVATE_DIAG, WRITE_EEPROM, 11D)
+[    8.650000] ath_rate_atheros: Copyright (c) 2001-2005 Atheros Communications, Inc, All Rights Reserved
+[    8.660000] ath_tx99: Version 2.0
+[    8.660000] Copyright (c) 2010 Atheros Communications, Inc, All Rights Reserved
+[    8.690000] ath_dev: Copyright (c) 2001-2007 Atheros Communications, Inc, All Rights Reserved
+[    8.710000] __ath_attach: Set global_scn[0]
+[    8.710000] *** All the minfree values should be <= ATH_TXBUF-32, otherwise default value will be used instead ***
+[    8.720000] ACBKMinfree = 48
+[    8.720000] ACBEMinfree = 32
+[    8.730000] ACVIMinfree = 16
+[    8.730000] ACVOMinfree = 0
+[    8.730000] CABMinfree = 48
+[    8.740000] UAPSDMinfree = 0
+[    8.740000] ATH_TXBUF=2700
+[    8.750000] Enterprise mode: 0x33fc0000
+[    8.750000] Restoring Cal data from FS
+[    8.760000] qdf_fs_read[54]: Fail to Open File /tmp/wifi0.caldata
+[    8.760000] Restoring Cal data from DRAM
+[    8.770000] Restoring Cal data from Flash
+[    8.770000] ar9300_eeprom_restore_internal[4610] No vaid CAL, calling default template
+[    8.780000]
+[    8.780000] ART Version : -48.0.0
+[    8.790000] SW Image Version : -48.0.0.0.0
+[    8.790000] Board Revision :
+[    8.790000] ar9300_attach: nf_2_nom -110 nf_2_max -60 nf_2_min -125
+[    8.800000]
+[    8.800000] [5G A/N]	scn_handle->scn_disable_band=15,[1,1,1,1]
+[    8.820000] SPECTRAL : get_capability not registered
+[    8.820000] HAL_CAP_PHYDIAG : Capable
+[    8.820000] SPECTRAL : Need to fix the capablity check for RADAR (spectral_attach : 237)
+[    8.830000] SPECTRAL : get_capability not registered
+[    8.840000] HAL_CAP_RADAR   : Capable
+[    8.840000] SPECTRAL : Need to fix the capablity check for SPECTRAL
+[    8.840000]  (spectral_attach : 242)
+[    8.850000] SPECTRAL : get_capability not registered
+[    8.860000] HAL_CAP_SPECTRAL_SCAN : Capable
+[    8.860000] SPECTRAL : get_tsf64 not registered
+[    8.870000] spectral_init_netlink 78 NULL SKB
+[    8.870000] SPECTRAL : No ADVANCED SPECTRAL SUPPORT
+[    8.870000] SPECTRAL :----- module attached
+[    8.880000] Green-AP : Green-AP : Attached
+[    8.880000]
+[    8.890000] ath_get_caps[6212] rx chainmask mismatch actual 7 sc_chainmak 0
+[    8.900000] ath_get_caps[6187] tx chainmask mismatch actual 7 sc_chainmak 0
+[    8.910000] band steering initialized for direct attach hardware
+[    8.920000] ieee80211_bsteering_attach: Band steering initialized
+[    8.920000] ath_attach_dfs[12733] dfsdomain 1
+[    8.930000] dfs_attach: event log enabled by default
+[    8.950000] SPECTRAL : module already attached
+[    8.950000] ath_attach: Set global_ic[1]..gloabl_ic ptr:8653cb70
+[    8.960000] osif_wrap_attach:467 osif wrap attached
+[    8.960000] osif_wrap_devt_init:428 osif wrap dev table init done
+[    8.970000]  Wrap Attached: Wrap_com =87b2a400 ic->ic_wrap_com=87b2a400 &wrap_com->wc_devt=87b2a400
+[    8.980000] ath_tx_paprd_init sc 872e8000 PAPRD disabled in HAL
+[    8.990000] wifi0: Atheros ???: mem_start: =0xb8100000, mem_end: =0xb8120000, irq=47
+[    9.000000] ath_da_pci:  (Atheros/multi-bss)
+[    9.210000] ath_ol_pci:  (Atheros/multi-bss)
+[    9.220000] hif_pci_enable_bus: con_mode = 0x0, device_id = 0x3c
+[    9.220000] ath_ol_pci 0000:01:00.0: BAR 0: assigned [mem 0x12000000-0x121fffff 64bit]
+[    9.230000] PCI: Enabling device 0000:01:00.0 (0000 -> 0002)
+[    9.240000] hif_pci_enable_bus: hif_enable_pci donehif_pci_enable_bus: hif_type = 0x6, target_type = 0x7hif_pci_enable_bus: hif_pci_probe_tgt_wakeup donehif_target_sync: Loop checking FW signalhif_target_sync: Got FW signal, retries = 48hif_config_ce: ce_init donehif_config_ce: X, ret = 0hif_set_hia: Ehif_set_hia_extnd: E
+[   10.000000]
+[   10.000000]  CLOCK PLL skipped
+[   10.000000] hif_pci_bus_configure: hif_set_hia donehif_configure_irq: Ehif_pci_configure_legacy_irq: Ehif_pci_configure_legacy_irq: X, ret = 0hif_enable: X OKhif_napi_create: NAPI structures initializedhif_napi_create: NAPI id 6 created for pipe 5qca_napi_create: napi instance 32 created on pipe 4
+[   10.030000] hif_napi_event: received evnt: CONF cmd; v = 1 (state=0x1)hif_napi_event: setting configuration to ON
+[   10.040000] __ol_ath_attach() Allocated scn 86040380
+[   10.050000] __ol_ath_attach: dev name wifi1
+[   10.050000] ol_ath_attach interface_id 1
+[   10.050000] ol_target_init() BMI inited.
+[   10.060000] ol_target_init() BMI Get Target Info.
+[   10.060000] Chip id: 0x7, chip version: 0x4100016c
+[   10.070000]
+[   10.070000]  CE WAR Disabled
+[   10.070000] NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+[   10.080000] ol_target_init() configure Target .
+[   10.080000] ol_transfer_bin_file: flash data file defined
+[   10.090000] ol_transfer_bin_file[4106] Get Caldata for wifi1.
+[   10.090000] qdf_fs_read[54]: Fail to Open File /tmp/wifi1.caldataol_transfer_bin_file: flash cal data len 2304 doesn't equal to 2116
+[   10.110000] ol_ath_download_firmware: BOARDDATA DOWNLOAD TO address 0x401cc0
+[   10.110000] ol_transfer_bin_file: Board data file AR9888v2
+[   10.120000] ol_transfer_bin_file: Board Data File download to address=0x401cc0 file name=AR9888/hw.2/fakeBoardData_AR6004.bin
+[   10.400000] ol_transfer_bin_file 3987: downloading file 3, Download data len 1024
+[   10.410000] Board extended Data download address: 0x0
+[   10.420000] ol_ath_download_firmware: Using 0x1234 for the remainder of init
+[   10.420000]
+[   10.420000]  Selecting  OTP binary for CHIP Version 0
+[   10.440000] ol_transfer_bin_file 3987: downloading file 0, Download data len 7224
+[   10.470000]
+[   10.470000]  [Non-Flash] : Ignore Module param
+[   10.480000]
+[   10.480000]  Second otp download Param 700
+[   10.540000] ol_ath_download_firmware : Second OTP download and Execute is good, param=0x2
+[   10.550000]
+[   10.550000]  Mission mode: Firmware CHIP Version 0
+[   10.560000] ol_transfer_bin_file: Downloading firmware file: AR9888/hw.2/athwlan.bin
+[   10.580000] ol_transfer_bin_file 3987: downloading file 1, Download data len 240640
+[   11.610000] ol_target_init() Download FW done.
+[   11.610000] ol_ath_attach() WMI attached. wmi_handle 8787c000
+[   11.620000] wmi_unified_register_event_handler: Event id 62 is unavailable
+[   11.630000] +htc_create ..  HIF :86024000-htc_create: (0x86020000)
+[   11.630000] htc_wmi_init() HT Create . 86020000
+[   11.640000] htc_wmi_init 8351 host_enable 1 nss_nwifi_offload 0
+[   11.640000] ol_ath_set_default_tgt_config : AC Minfree buffer allocation through module param (umac.ko)
+[   11.650000]  OL_ACBKMinfree : 0
+[   11.660000]  OL_ACBEMinfree : 0
+[   11.660000]  OL_ACVIMinfree : 0
+[   11.660000]  OL_ACVOMinfree : 0
+[   11.670000] hif_enable_fastpath, Enabling fastpath mode
+[   11.670000] +HWT
+[   11.670000] hif_completion_thread_startup: pipe_num:0 pipe_info:0x8602705chif_completion_thread_startup: pipe_num:3 pipe_info:0x8602711chif_completion_thread_startup: pipe_num:4 pipe_info:0x8602715c
+[   11.690000] -HWT
+[   11.700000] Startup Mode-0 set
+[   11.700000]
+[   11.700000] <=== cfg max peer id 1056 ====>
+[   11.710000] htt_peer_map_timer_init Enter pdev 85e48000 hrtimer 85e4c8a8
+[   11.710000]
+[   11.710000]  htt_alloc_peer_map_mem : Alloc Success : host q vaddr 862ee000 paddr 62ee000
+[   11.720000]
+[   11.720000]  htt_alloc_peer_map_mem : Flush Interval Configured to 256 pkts
+[   11.730000] ol_txrx_pdev_attach: 1424 tx desc's allocated ; range starts from 85ac0000
+[   11.740000] Firmware_Build_Number:0
+[   11.750000] host/RAM_fw Build Ver Mismatch: H:0x29, F:0x0 !
+[   11.750000] FW wireless modes: 0x1c0001
+[   11.760000] num_rf_chain:0x00000003  ht_cap_info:0x0000085b  vht_cap_info:0x338001b2  vht_supp_mcs:0x0000ffea
+[   11.770000] wmi_service_coex_gpio 0, wmi_service_4_wire_coex_support 0, coex_version 0
+[   11.770000]
+[   11.770000] Sending Ext resource cfg: HOST PLATFORM as 1
+[   11.770000] fw_feature_bitmap as 50 to TGT
+[   11.790000] ol_ath_service_ready_event: tt_support: 0
+[   11.790000] ol_ath_service_ready_event: periodic_chan_stats: 1
+[   11.800000] ol_ath_service_ready_event: sw_cal_support_check_flag: 0
+[   11.800000] LARGE_AP enabled. num_peers 144, num_vdevs 16, num_tids 256
+[   11.810000] idx 0 req 1  num_units 0 num_unit_info 2 unit size 440 actual units 145
+[   11.820000] Support not added yet for Service 91
+[   11.820000] Support not added yet for Service 92
+[   11.830000] No EXT_MSG send INIT now
+[   11.830000] chunk 0 len 63800 requested , ptr  0x5b00000
+[   11.850000] FIRMWARE:P 145 V 16 T 443
+[   11.850000]
+[   11.850000] Version = 16777216 3  status = 0
+[   11.860000] ol_ath_connect_htc() WMI is ready
+[   11.860000] htt_h2t_frag_desc_bank_cfg_msg - HTT_H2T_MSG_TYPE_FRAG_DESC_BANK_CFG sent to FW for radio ID = 1
+[   11.870000] target uses HTT version 2.2; host uses 2.2
+[   11.880000] ol_ath_attach() connect HTC.
+[   11.880000] bypasswmi : 0
+[   11.890000] ol_regdmn_start: reg-domain param: regdmn=0, countryName=, wModeSelect=FFFFFFFF, netBand=FFFFFFFF, extendedChanMode=0.
+[   11.900000]
+[   11.900000] [5G AC] scn_handle->scn_disable_band=15,[1,1,1,1]
+[   11.910000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x2) flags 0x2150
+[   11.910000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x4) flags 0xa0
+[   11.920000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x8) flags 0xc0
+[   11.930000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x20) flags 0xd0
+[   11.930000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x40) flags 0x150
+[   11.940000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x800) flags 0x10080
+[   11.950000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x2000) flags 0x20080
+[   11.960000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x4000) flags 0x40080
+[   11.960000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x1000) flags 0x10100
+[   11.970000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x8000) flags 0x20100
+[   11.980000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x10000) flags 0x40100
+[   11.990000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x20000) flags 0x100100
+[   11.990000] Add VHT80 channel: 5210
+[   12.000000] Add VHT80 channel: 5290
+[   12.000000] Add VHT80 channel: 5530
+[   12.010000] Add VHT80 channel: 5610
+[   12.010000] Add VHT80 channel: 5690
+[   12.010000] Add VHT80 channel: 5775
+[   12.020000] Skipping VHT80 channel 5825
+[   12.020000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x200000) flags 0x4000100
+[   12.030000] ol_regdmn_init_channels: !avail mode 0x1c0001 (0x400000) flags 0x8000100
+[   12.040000] ol_ath_phyerr_attach: called
+[   12.040000] freq=58
+[   12.040000] freq=106
+[   12.040000] OL Resmgr Init-ed
+[   12.040000] ieee80211_bsteering_attach: Band steering initialized
+[   12.050000] ol_if_spectral_setup
+[   12.050000] SPECTRAL : get_capability not registered
+[   12.060000] HAL_CAP_PHYDIAG : Capable
+[   12.060000] SPECTRAL : Need to fix the capablity check for RADAR (spectral_attach : 237)
+[   12.070000] SPECTRAL : get_capability not registered
+[   12.070000] HAL_CAP_RADAR   : Capable
+[   12.080000] SPECTRAL : Need to fix the capablity check for SPECTRAL
+[   12.080000]  (spectral_attach : 242)
+[   12.090000] SPECTRAL : get_capability not registered
+[   12.090000] HAL_CAP_SPECTRAL_SCAN : Capable
+[   12.100000] SPECTRAL : get_tsf64 not registered
+[   12.100000] spectral_init_netlink 78 NULL SKB
+[   12.100000] Green-AP : Green-AP : Attached
+[   12.100000]
+[   12.110000] Green-AP : Attached
+[   12.110000] ol_ath_smart_ant_attach: Hardware doest not support Smart Antenna.
+[   12.120000] ol_if_dfs_setup: called
+[   12.120000] ol_if_dfs_attach: called; ptr=85b1997c, radar_info=87b89b40
+[   12.130000] dfs_attach: event log enabled by default
+[   12.130000] ol_ath_lowi_wmi_event_attach: called
+[   12.130000] >>>> CB Set   (null)
+[   12.140000] ol_ath_attach() UMAC attach .
+[   12.140000]
+[   12.140000]  BURSTING enabled by default
+[   12.150000] ol_ath_attach: Set global_ic[2] ..ptr:8653cb70
+[   12.150000] ath_lowi_if_netlink_init LOWI Netlink successfully created
+[   12.160000] osif_wrap_attach:467 osif wrap attached
+[   12.160000] osif_wrap_devt_init:428 osif wrap dev table init done
+[   12.170000]  Wrap Attached: Wrap_com =87b27c00 ic->ic_wrap_com=87b27c00 &wrap_com->wc_devt=87b27c00
+[   12.180000] __ol_ath_attach: hard_header_len reservation 74
+[   12.190000] ol_ath_thermal_mitigation_attach: TT not supported in FW
+[   12.190000] offload dynamic register sysctl on dev name : wifi1  successful!
+[   12.190000]
+[   12.200000] ol_ath_pci_probe num_radios=0, wifi_radios[0].sc = 86040380 wifi_radio_type = 2
+[   12.210000] ath_sysfs_diag_init: diag_fsattr
+[   12.220000]  pktlog_init: Initializing Pktlog for AR9888, pktlog_hdr_size = 12
+[   12.230000] __sa_init_module
+[   12.240000] nf_conntrack version 0.5.0 (1976 buckets, 7904 max)
+[   12.240000] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   12.280000] batman_adv: B.A.T.M.A.N. advanced 2016.3 (compatibility version 15) loaded
+[   12.320000] Ebtables v2.0 registered
+[   12.340000] xt_coova: ready
+[   12.370000] xt_time: kernel timezone is -0000
+[   12.640000] [wifi1] FWLOG: [24996] WAL_DBGID_TX_AC_BUFFER_SET ( 0x3, 0x1e, 0x460, 0x460, 0x0 )
+[   12.650000] [wifi1] FWLOG: [24996] WAL_DBGID_TX_AC_BUFFER_SET ( 0x12, 0x1e, 0x460, 0x460, 0x0 )
+[   12.660000] [wifi1] FWLOG: [24996] WAL_DBGID_TX_AC_BUFFER_SET ( 0x45, 0x1e, 0x460, 0x460, 0x0 )
+[   12.670000] [wifi1] FWLOG: [24996] WAL_DBGID_TX_AC_BUFFER_SET ( 0x67, 0x1e, 0x460, 0x460, 0x0 )
+[   12.680000] [wifi1] FWLOG: [24998] WHAL_ERROR_RESET_PM (  )
+[   12.690000] [wifi1] FWLOG: [25004] WAL_DBGID_DEV_RESET ( 0x1, 0x1, 0x1 )
+[   21.160000] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   21.180000] device eth0 entered promiscuous mode
+[   21.180000] ADDRCONF(NETDEV_UP): br-lan: link is not ready
+[   21.200000] ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   21.200000] device eth1 entered promiscuous mode
+[   21.210000] eth0: link up (1000Mbps/Full duplex)
+[   21.240000] br-lan: port 1(eth0) entered forwarding state
+[   21.240000] br-lan: port 1(eth0) entered forwarding state
+[   21.250000] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   21.260000] ADDRCONF(NETDEV_CHANGE): br-lan: link becomes ready
+[   26.240000] Ebtables v2.0 unregistered
+[   27.090000] __sa_exit_module
+[   27.130000] Suspending Target - with disable_intr set :wifi1 (sc 86024000)
+[   27.130000] waiting for target paused event from target :wifi1 (sc 86024000)
+[   27.140000] ath_sysfs_diag_fini: diag_fsattr
+[   27.150000] osif_wrap_devt_detach:445 osif wrap dev table detached
+[   27.150000] osif_wrap_detach:498 osif wrap detached
+[   27.160000] offload dynamic unregister sysctl on dev name wifi1 successful!
+[   27.160000] ol_ath_thermal_mitigation_detach: ++
+[   27.170000] ol_ath_thermal_mitigation_detach: --
+[   27.180000] ath_lowi_if_netlink_delete Going to decrement current LOWI netlink ref count: 1
+[   27.180000] ol_if_dfs_teardown: called
+[   27.190000] ol_if_dfs_clist_update: called, cmd=1, nollist=  (null), nentries=0
+[   27.200000] ol_ath_phyerr_detach: called
+[   27.200000] channel is not 2.4G return faile
+[   27.210000] ieee80211_bsteering_detach: Band steering terminated
+[   27.210000] ieee80211_ifdetach: ATF terminated
+[   27.220000] ce_h2t_tx_ce_cleanup 1039 Fastpath mode ON, Cleaning up HTT Tx CE
+[   27.220000] ol_tx_me_exit: Already Disabled !!!
+[   27.230000] Green-AP : Green-AP : Detached
+[   27.230000]
+[   27.240000] Green-AP : Detached
+[   27.240000] hif_pci_device_warm_reset: Target Warm Resethif_pci_device_warm_reset: Host Intr Cause reg 0x900c : value : 0x0hif_pci_device_warm_reset: Target CPU Intr Cause 0x5040hif_pci_device_warm_reset: addr 0x4050 :  0x4hif_pci_device_warm_reset: Target CPU Intr Cause after CE reset 0x40hif_pci_device_warm_reset: RESET_CONTROL after cpu warm reset 0x800hif_pci_device_warm_reset: Target Warm reset completehif_pci_disable_bus: Xhif_disable: X
+[   27.500000] ol_if_spectral_detach
+[   27.500000] SPECTRAL : Module removed (spectral = 85b10000)
+[   27.510000] ol_ath_detach: remove global_ic[1]..gloabl_ic ptr:8653cb70
+[   27.510000] ol_ath_detach: Peer Count 145
+[   27.520000] ath_pci_remove
+[   27.540000] osif_wrap_devt_detach:445 osif wrap dev table detached
+[   27.550000] osif_wrap_detach:498 osif wrap detached
+[   27.560000] band steering terminated  for direct attach hardware
+[   27.570000] ieee80211_bsteering_detach: Band steering terminated
+[   27.570000] ieee80211_ifdetach: ATF terminated
+[   27.580000] ath_net80211_dfs_clist_update: called, cmd=1, nollist=  (null), nentries=0
+[   27.590000] SPECTRAL : Module removed (spectral = 8707c000)
+[   27.600000] Green-AP : Green-AP : Detached
+[   27.600000]
+[   27.660000] ath_detach: remove global_ic[0]..gloabl_ic ptr:8653cb70
+[   27.690000] Removing athdebug proc file
+[   27.700000] ath_dev: driver unloaded
+[   27.740000] ath_tx99: driver unloaded
+[   27.770000] ath_rate_atheros: driver unloaded
+[   27.790000] ath_hal: driver unloaded
+[   27.830000] ath_spectral: driver unloaded
+[   27.850000] ath_dfs: driver unloaded
+[   30.690000] ath_dfs: Version 2.0.0
+[   30.690000] Copyright (c) 2005-2006 Atheros Communications, Inc. All Rights Reserved
+[   30.720000] ath_spectral: Version 2.0.0
+[   30.720000] Copyright (c) 2005-2009 Atheros Communications, Inc. All Rights Reserved
+[   30.890000] ath_hal: 0.9.17.1 (AR5416, AR9380, REGOPS_FUNC, PRIVATE_DIAG, WRITE_EEPROM, 11D)
+[   30.910000] ath_rate_atheros: Copyright (c) 2001-2005 Atheros Communications, Inc, All Rights Reserved
+[   30.930000] ath_tx99: Version 2.0
+[   30.930000] Copyright (c) 2010 Atheros Communications, Inc, All Rights Reserved
+[   30.970000] ath_dev: Copyright (c) 2001-2007 Atheros Communications, Inc, All Rights Reserved
+[   31.000000] __ath_attach: Set global_scn[0]
+[   31.000000] *** All the minfree values should be <= ATH_TXBUF-32, otherwise default value will be used instead ***
+[   31.010000] ACBKMinfree = 48
+[   31.020000] ACBEMinfree = 32
+[   31.020000] ACVIMinfree = 16
+[   31.020000] ACVOMinfree = 0
+[   31.020000] CABMinfree = 48
+[   31.030000] UAPSDMinfree = 0
+[   31.030000] ATH_TXBUF=2700
+[   31.040000] Enterprise mode: 0x33fc0000
+[   31.050000] Restoring Cal data from FS
+[   31.050000] qdf_fs_read[59], Open File /tmp/wifi0.caldata SUCCESS!!file system magic:16914836super blocksize:4096inode 2105file size:1088
+[   31.060000] ART Version : 10.357
+[   31.070000] SW Image Version : 7.12.-10.2.9
+[   31.070000] Board Revision :
+[   31.070000] ar9300_attach: nf_2_nom -110 nf_2_max -60 nf_2_min -125
+[   31.080000]
+[   31.080000] [5G A/N]	scn_handle->scn_disable_band=15,[1,1,1,1]
+[   31.090000] SPECTRAL : get_capability not registered
+[   31.090000] HAL_CAP_PHYDIAG : Capable
+[   31.100000] SPECTRAL : Need to fix the capablity check for RADAR (spectral_attach : 237)
+[   31.110000] SPECTRAL : get_capability not registered
+[   31.110000] HAL_CAP_RADAR   : Capable
+[   31.120000] SPECTRAL : Need to fix the capablity check for SPECTRAL
+[   31.120000]  (spectral_attach : 242)
+[   31.130000] SPECTRAL : get_capability not registered
+[   31.130000] HAL_CAP_SPECTRAL_SCAN : Capable
+[   31.130000] SPECTRAL : get_tsf64 not registered
+[   31.140000] spectral_init_netlink 78 NULL SKB
+[   31.140000] SPECTRAL : No ADVANCED SPECTRAL SUPPORT
+[   31.150000] SPECTRAL :----- module attached
+[   31.150000] Green-AP : Green-AP : Attached
+[   31.150000]
+[   31.170000] ath_get_caps[6212] rx chainmask mismatch actual 7 sc_chainmak 0
+[   31.170000] ath_get_caps[6187] tx chainmask mismatch actual 7 sc_chainmak 0
+[   31.190000] band steering initialized for direct attach hardware
+[   31.190000] ieee80211_bsteering_attach: Band steering initialized
+[   31.200000] ath_attach_dfs[12733] dfsdomain 1
+[   31.210000] dfs_attach: event log enabled by default
+[   31.220000] SPECTRAL : module already attached
+[   31.220000] ath_attach: Set global_ic[1]..gloabl_ic ptr:84d3cb70
+[   31.230000] osif_wrap_attach:467 osif wrap attached
+[   31.240000] osif_wrap_devt_init:428 osif wrap dev table init done
+[   31.240000]  Wrap Attached: Wrap_com =87b2a000 ic->ic_wrap_com=87b2a000 &wrap_com->wc_devt=87b2a000
+[   31.260000] ath_tx_paprd_init sc 864e8000 PAPRD disabled in HAL
+[   31.260000] wifi0: Atheros ???: mem_start: =0xb8100000, mem_end: =0xb8120000, irq=47
+[   31.270000] ath_da_pci:  (Atheros/multi-bss)
+[   31.400000] ath_ol_pci:  (Atheros/multi-bss)
+[   31.400000] hif_pci_enable_bus: con_mode = 0x0, device_id = 0x3c
+[   31.410000] ath_ol_pci 0000:01:00.0: BAR 0: assigned [mem 0x12000000-0x121fffff 64bit]
+[   31.420000] hif_pci_enable_bus: hif_enable_pci donehif_pci_enable_bus: hif_type = 0x6, target_type = 0x7hif_pci_enable_bus: hif_pci_probe_tgt_wakeup donehif_target_sync: Loop checking FW signalhif_target_sync: Got FW signal, retries = 5hif_config_ce: ce_init donehif_config_ce: X, ret = 0hif_set_hia: Ehif_set_hia_extnd: E
+[   31.510000]
+[   31.510000]  CLOCK PLL skipped
+[   31.510000] hif_pci_bus_configure: hif_set_hia donehif_configure_irq: Ehif_pci_configure_legacy_irq: Ehif_pci_configure_legacy_irq: X, ret = 0hif_enable: X OKhif_napi_create: NAPI structures initializedhif_napi_create: NAPI id 6 created for pipe 5qca_napi_create: napi instance 32 created on pipe 4
+[   31.540000] hif_napi_event: received evnt: CONF cmd; v = 1 (state=0x1)hif_napi_event: setting configuration to ON
+[   31.550000] __ol_ath_attach() Allocated scn 87180380
+[   31.560000] __ol_ath_attach: dev name wifi1
+[   31.560000] ol_ath_attach interface_id 1
+[   31.570000] ol_target_init() BMI inited.
+[   31.570000] ol_target_init() BMI Get Target Info.
+[   31.580000] Chip id: 0x7, chip version: 0x4100016c
+[   31.580000]
+[   31.580000]  CE WAR Disabled
+[   31.590000] NUM_DEV=1 FWMODE=0x2 FWSUBMODE=0x0 FWBR_BUF 0
+[   31.590000] ol_target_init() configure Target .
+[   31.600000] ol_transfer_bin_file: flash data file defined
+[   31.600000] ol_transfer_bin_file[4106] Get Caldata for wifi1.
+[   31.610000] qdf_fs_read[59], Open File /tmp/wifi1.caldata SUCCESS!!file system magic:16914836super blocksize:4096inode 2106file size:2116qc98xx_verify_checksum: flash checksum passed: 0x3e5b
+[   31.630000]
+[   31.630000] ========== ac_obey_reg_power = 1
+[   31.630000] ol_transfer_bin_file 4198: Download Flash data len 2116
+[   31.640000] Board extended Data download address: 0x0
+[   31.650000]
+[   31.650000]  Mission mode: Firmware CHIP Version 0
+[   31.650000] ol_transfer_bin_file: Downloading firmware file: AR9888/hw.2/athwlan.bin
+[   31.680000] ol_transfer_bin_file 3987: downloading file 1, Download data len 240640
+[   32.720000] ol_target_init() Download FW done.
+[   32.730000] ol_ath_attach() WMI attached. wmi_handle 85e9e000
+[   32.730000] wmi_unified_register_event_handler: Event id 62 is unavailable
+[   32.740000] +htc_create ..  HIF :87044000-htc_create: (0x86020800)
+[   32.750000] htc_wmi_init() HT Create . 86020800
+[   32.750000] htc_wmi_init 8351 host_enable 1 nss_nwifi_offload 0
+[   32.760000] ol_ath_set_default_tgt_config : AC Minfree buffer allocation through module param (umac.ko)
+[   32.770000]  OL_ACBKMinfree : 0
+[   32.770000]  OL_ACBEMinfree : 0
+[   32.770000]  OL_ACVIMinfree : 0
+[   32.780000]  OL_ACVOMinfree : 0
+[   32.780000] hif_enable_fastpath, Enabling fastpath mode
+[   32.780000] +HWT
+[   32.790000] hif_completion_thread_startup: pipe_num:0 pipe_info:0x8704705chif_completion_thread_startup: pipe_num:3 pipe_info:0x8704711chif_completion_thread_startup: pipe_num:4 pipe_info:0x8704715c
+[   32.810000] -HWT
+[   32.810000] Startup Mode-0 set
+[   32.810000]
+[   32.810000] <=== cfg max peer id 1056 ====>
+[   32.820000] htt_peer_map_timer_init Enter pdev 86060000 hrtimer 860648a8
+[   32.830000]
+[   32.830000]  htt_alloc_peer_map_mem : Alloc Success : host q vaddr 862e8000 paddr 62e8000
+[   32.840000]
+[   32.840000]  htt_alloc_peer_map_mem : Flush Interval Configured to 256 pkts
+[   32.850000] ol_txrx_pdev_attach: 1424 tx desc's allocated ; range starts from 86510000
+[   32.860000] Firmware_Build_Number:0
+[   32.860000] host/RAM_fw Build Ver Mismatch: H:0x29, F:0x0 !
+[   32.870000] FW wireless modes: 0x1f9001
+[   32.870000] num_rf_chain:0x00000003  ht_cap_info:0x0000085b  vht_cap_info:0x338001b2  vht_supp_mcs:0x0000ffea
+[   32.880000] wmi_service_coex_gpio 0, wmi_service_4_wire_coex_support 0, coex_version 0
+[   32.890000]
+[   32.890000] Sending Ext resource cfg: HOST PLATFORM as 1
+[   32.890000] fw_feature_bitmap as 50 to TGT
+[   32.900000] ol_ath_service_ready_event: tt_support: 0
+[   32.910000] ol_ath_service_ready_event: periodic_chan_stats: 1
+[   32.910000] ol_ath_service_ready_event: sw_cal_support_check_flag: 0
+[   32.920000] LARGE_AP enabled. num_peers 144, num_vdevs 16, num_tids 256
+[   32.920000] idx 0 req 1  num_units 0 num_unit_info 2 unit size 440 actual units 145
+[   32.930000] Support not added yet for Service 91
+[   32.940000] Support not added yet for Service 92
+[   32.940000] No EXT_MSG send INIT now
+[   32.950000] chunk 0 len 63800 requested , ptr  0x6530000
+[   32.960000] FIRMWARE:P 145 V 16 T 443
+[   32.960000]
+[   32.970000] Version = 16777216 3  status = 0
+[   32.970000] ol_ath_connect_htc() WMI is ready
+[   32.980000] htt_h2t_frag_desc_bank_cfg_msg - HTT_H2T_MSG_TYPE_FRAG_DESC_BANK_CFG sent to FW for radio ID = 1
+[   32.990000] target uses HTT version 2.2; host uses 2.2
+[   33.000000] ol_ath_attach() connect HTC.
+[   33.000000] bypasswmi : 0
+[   33.000000] ol_regdmn_start: reg-domain param: regdmn=0, countryName=, wModeSelect=FFFFFFFF, netBand=FFFFFFFF, extendedChanMode=0.
+[   33.010000]
+[   33.010000] [5G AC] scn_handle->scn_disable_band=15,[1,1,1,1]
+[   33.020000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2) flags 0x2150
+[   33.030000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4) flags 0xa0
+[   33.040000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x8) flags 0xc0
+[   33.040000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x20) flags 0xd0
+[   33.050000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x40) flags 0x150
+[   33.060000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x800) flags 0x10080
+[   33.060000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2000) flags 0x20080
+[   33.070000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4000) flags 0x40080
+[   33.080000] Add VHT80 channel: 5210
+[   33.080000] Add VHT80 channel: 5290
+[   33.090000] Add VHT80 channel: 5530
+[   33.090000] Add VHT80 channel: 5610
+[   33.090000] Add VHT80 channel: 5690
+[   33.100000] Add VHT80 channel: 5775
+[   33.100000] Skipping VHT80 channel 5825
+[   33.110000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x200000) flags 0x4000100
+[   33.110000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x400000) flags 0x8000100
+[   33.120000] ol_ath_phyerr_attach: called
+[   33.120000] freq=58
+[   33.120000] freq=106
+[   33.130000] OL Resmgr Init-ed
+[   33.130000] ieee80211_bsteering_attach: Band steering initialized
+[   33.140000] ol_if_spectral_setup
+[   33.140000] SPECTRAL : get_capability not registered
+[   33.140000] HAL_CAP_PHYDIAG : Capable
+[   33.140000] SPECTRAL : Need to fix the capablity check for RADAR (spectral_attach : 237)
+[   33.150000] SPECTRAL : get_capability not registered
+[   33.160000] HAL_CAP_RADAR   : Capable
+[   33.160000] SPECTRAL : Need to fix the capablity check for SPECTRAL
+[   33.160000]  (spectral_attach : 242)
+[   33.170000] SPECTRAL : get_capability not registered
+[   33.180000] HAL_CAP_SPECTRAL_SCAN : Capable
+[   33.180000] SPECTRAL : get_tsf64 not registered
+[   33.190000] spectral_init_netlink 78 NULL SKB
+[   33.190000] Green-AP : Green-AP : Attached
+[   33.190000]
+[   33.200000] Green-AP : Attached
+[   33.200000] ol_ath_smart_ant_attach: Hardware doest not support Smart Antenna.
+[   33.210000] ol_if_dfs_setup: called
+[   33.210000] ol_if_dfs_attach: called; ptr=865c197c, radar_info=8713db40
+[   33.210000] dfs_attach: event log enabled by default
+[   33.220000] ol_ath_lowi_wmi_event_attach: called
+[   33.220000] >>>> CB Set   (null)
+[   33.220000] ol_ath_attach() UMAC attach .
+[   33.230000]
+[   33.230000]  BURSTING enabled by default
+[   33.230000] ol_ath_attach: Set global_ic[2] ..ptr:84d3cb70
+[   33.240000] ath_lowi_if_netlink_init LOWI Netlink successfully created
+[   33.250000] osif_wrap_attach:467 osif wrap attached
+[   33.250000] osif_wrap_devt_init:428 osif wrap dev table init done
+[   33.260000]  Wrap Attached: Wrap_com =85570600 ic->ic_wrap_com=85570600 &wrap_com->wc_devt=85570600
+[   33.270000] __ol_ath_attach: hard_header_len reservation 74
+[   33.270000] ol_ath_thermal_mitigation_attach: TT not supported in FW
+[   33.280000] offload dynamic register sysctl on dev name : wifi1  successful!
+[   33.280000]
+[   33.290000] ol_ath_pci_probe num_radios=0, wifi_radios[0].sc = 87180380 wifi_radio_type = 2
+[   33.300000] ath_sysfs_diag_init: diag_fsattr
+[   33.320000]  pktlog_init: Initializing Pktlog for AR9888, pktlog_hdr_size = 12
+[   33.350000] __sa_init_module
+[   33.760000] [wifi1] FWLOG: [46620] WAL_DBGID_TX_AC_BUFFER_SET ( 0x3, 0x1e, 0x460, 0x460, 0x0 )
+[   33.770000] [wifi1] FWLOG: [46620] WAL_DBGID_TX_AC_BUFFER_SET ( 0x12, 0x1e, 0x460, 0x460, 0x0 )
+[   33.770000] [wifi1] FWLOG: [46620] WAL_DBGID_TX_AC_BUFFER_SET ( 0x45, 0x1e, 0x460, 0x460, 0x0 )
+[   33.780000] [wifi1] FWLOG: [46620] WAL_DBGID_TX_AC_BUFFER_SET ( 0x67, 0x1e, 0x460, 0x460, 0x0 )
+[   33.790000] [wifi1] FWLOG: [46622] WHAL_ERROR_RESET_PM (  )
+[   33.800000] [wifi1] FWLOG: [46628] WAL_DBGID_DEV_RESET ( 0x1, 0x1, 0x1 )
+[   33.830000]
+[   33.830000] [5G AC] scn_handle->scn_disable_band=4,[0,1,0,0]
+[   33.840000] isCountryCodeValid: EEPROM regdomain 0x0
+[   33.840000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2) flags 0x2150
+[   33.850000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4) flags 0xa0
+[   33.850000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x8) flags 0xc0
+[   33.860000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x20) flags 0xd0
+[   33.870000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x40) flags 0x150
+[   33.880000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x800) flags 0x10080
+[   33.880000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x2000) flags 0x20080
+[   33.890000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x4000) flags 0x40080
+[   33.900000] Add VHT80 channel: 5210
+[   33.900000] Add VHT80 channel: 5290
+[   33.910000] Add VHT80 channel: 5530
+[   33.910000] Add VHT80 channel: 5610
+[   33.910000] Skipping VHT80 channel 5700
+[   33.920000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x200000) flags 0x4000100
+[   33.920000] ol_regdmn_init_channels: !avail mode 0x1f9001 (0x400000) flags 0x8000100
+[   33.930000] freq=106
+[   33.950000] Resetting spectral chainmask to Rx chainmask
+[   34.100000] wlan_vap_create : enter. devhandle=0x87180380, opmode=IEEE80211_M_HOSTAP, flags=0x1
+[   34.110000] send_vdev_create_cmd_non_tlv: ID = 0 Type = 1, Subtype = 0 VAP Addr = 88:dc:96:80:95:bf:
+[   34.120000] ieee80211_mbo_vattach:MBO Initialized
+[   34.120000] ieee80211_oce_vattach: OCE Initialized
+[   34.130000] wlan_vap_create : exit. devhandle=0x87180380, vap=0x86028000, opmode=IEEE80211_M_HOSTAP, flags=0x1.
+[   34.140000] __ieee80211_smart_ant_init: Smart Antenna is not supported
+[   34.140000] VAP device ath1 created osifp: (8566c380) os_if: (86028000)
+[   34.270000] ME Pool succesfully initialized vaddr - 866e0000 paddr - 0
+[   34.270000] num_elems = 1424 buf_size - 64 pool_size = 102528
+[   34.280000] Enable MCAST_TO_UCAST
+[   34.340000]
+[   34.340000]  DES SSID SET=
+[   34.350000] [DEBUG] vap-0(ath1):set SIOC80211NWID, 16 characters
+[   34.350000]
+[   34.350000]  DES SSID SET=EnGenius8095BE_1
+[   34.760000] [wifi1] FWLOG: [47652] WHAL_ERROR_RESET_PM (  )
+[   34.760000] [wifi1] FWLOG: [47659] WAL_DBGID_DEV_RESET ( 0x1, 0x1, 0x1 )
+[   34.770000] [wifi1] FWLOG: [47659] WHAL_ERROR_RESET_PM (  )
+[   34.770000] [wifi1] FWLOG: [47666] WAL_DBGID_DEV_RESET ( 0x1, 0x1, 0x1 )
+[   34.780000] [wifi1] FWLOG: [47806] WHAL_ERROR_RESET_CHANNF1 (  )
+[   34.790000] [wifi1] FWLOG: [47992] vap-0 WMI_CMD_PARAMS ( 0xff, 0x40, 0x1 )
+[   34.800000] [wifi1] FWLOG: [48022] RATE: NEW NSS 3
+[   34.800000]
+[   34.890000] device ath1 entered promiscuous mode
+[   34.910000] eth0: link down
+[   34.920000] br-lan: port 1(eth0) entered disabled state
+[   34.930000] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   34.950000] br-lan: port 2(eth1) entered disabled state
+[   34.960000] ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   35.070000] br-lan: port 3(ath1) entered forwarding state
+[   35.070000] br-lan: port 3(ath1) entered forwarding state
+[   35.080000] 8021q: adding VLAN 0 to HW filter on device ath1
+[   35.650000] eth0: link up (1000Mbps/Full duplex)
+[   35.650000] br-lan: port 1(eth0) entered forwarding state
+[   35.660000] br-lan: port 1(eth0) entered forwarding state
+[   35.660000] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   35.760000] [wifi1] FWLOG: [48763] WAL_DBGID_BB_WDOG_TRIGGERED ( 0xbe7b, 0x200008a, 0x0, 0x1 )
+[   36.170000] ath_net80211_dfs_clist_update: called, cmd=1, nollist=  (null), nentries=0
+[   36.180000] ath_attach_dfs[12733] dfsdomain 1
+[   36.190000] dfs_attach: event log enabled by default
+[   36.210000]
+[   36.210000] [5G A/N]	scn_handle->scn_disable_band=4,[0,1,0,0]
+[   36.250000] 	DCS for CW interference mitigation:   0
+[   36.250000] 	DCS for WLAN interference mitigation: 0
+[   36.290000] wlan_vap_create : enter. devhandle=0x864f0380, opmode=IEEE80211_M_HOSTAP, flags=0x1
+[   36.300000] ieee80211_mbo_vattach:MBO Initialized
+[   36.300000] ieee80211_oce_vattach: OCE Initialized
+[   36.310000] wlan_vap_create : exit. devhandle=0x864f0380, vap=0x86208000, opmode=IEEE80211_M_HOSTAP, flags=0x1.
+[   36.320000] __ieee80211_smart_ant_init: Smart Antenna is not supported
+[   36.330000] VAP device ath0 created osifp: (85acd380) os_if: (86208000)
+[   36.490000]
+[   36.490000]  DES SSID SET=
+[   36.500000] [DEBUG] vap-0(ath0):set SIOC80211NWID, 16 characters
+[   36.510000]
+[   36.510000]  DES SSID SET=EnGenius8095BE_1
+[   37.000000] device ath0 entered promiscuous mode
+[   37.020000] eth0: link down
+[   37.020000] br-lan: port 1(eth0) entered disabled state
+[   37.040000] ADDRCONF(NETDEV_UP): eth0: link is not ready
+[   37.050000] br-lan: port 2(eth1) entered disabled state
+[   37.070000] ADDRCONF(NETDEV_UP): eth1: link is not ready
+[   37.230000] br-lan: port 4(ath0) entered forwarding state
+[   37.230000] br-lan: port 4(ath0) entered forwarding state
+[   37.250000] 8021q: adding VLAN 0 to HW filter on device ath0
+[   37.650000] eth0: link up (1000Mbps/Full duplex)
+[   37.650000] br-lan: port 1(eth0) entered forwarding state
+[   37.660000] br-lan: port 1(eth0) entered forwarding state
+[   37.660000] ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[   38.370000] send_vdev_down_cmd_non_tlv for vap 0 (85e9e000)
+[   38.370000] 1) 5GHz channel: 100,  acs->acs_chan_rssitotal[100]: 0
+[   38.380000] 2) 5GHz channel: 108,  acs->acs_chan_rssitotal[108]: 0
+[   38.390000] 3) 5GHz channel: 132,  acs->acs_chan_rssitotal[132]: 0
+[   38.390000] 4) 5GHz channel: 104,  acs->acs_chan_rssitotal[104]: 0
+[   38.400000] 5) 5GHz channel: 112,  acs->acs_chan_rssitotal[112]: 0
+[   38.400000] 6) 5GHz channel: 136,  acs->acs_chan_rssitotal[136]: 0
+[   38.410000] OL vap_start +
+[   38.410000] VDEV START
+[   38.420000] OL vap_start -
+[   38.420000] ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+[   38.430000] ol_vdev_start_resp_ev for vap 0 (85e9e000)
+[   38.430000] send_wmm_update_cmd_non_tlv:
+[   38.440000] ol_if_dfs_configure: called
+[   38.440000] ol_if_dfs_configure: ETSI domain
+[   38.440000] ol_if_dfs_disable: called
+[   38.440000] ol_if_dfs_enable: called
+[   40.050000] __ieee80211_smart_ant_init: Smart Antenna is not supported
+[   40.100000] siwfreq
+[   40.100000] Set freq vap 0 stop send + 86028000
+[   40.100000] STOPPED EVENT for vap 0 (85e9e000)
+[   40.110000] send_vdev_down_cmd_non_tlv for vap 0 (85e9e000)
+[   40.110000] Set freq vap 0 stop send -86028000
+[   40.150000] Set wait done --86028000
+[   42.270000] siwfreq
+[   42.280000] Set freq vap 0 stop send + 86208000
+[   42.290000] Set freq vap 0 stop send -86208000
+[   42.330000] Set wait done --86208000
+[   43.480000] send_vdev_down_cmd_non_tlv for vap 0 (85e9e000)
+[   43.480000] 1) 5GHz channel: 100,  acs->acs_chan_rssitotal[100]: 0
+[   43.490000] 2) 5GHz channel: 108,  acs->acs_chan_rssitotal[108]: 0
+[   43.500000] 3) 5GHz channel: 132,  acs->acs_chan_rssitotal[132]: 0
+[   43.500000] 4) 5GHz channel: 104,  acs->acs_chan_rssitotal[104]: 0
+[   43.510000] 5) 5GHz channel: 112,  acs->acs_chan_rssitotal[112]: 0
+[   43.510000] 6) 5GHz channel: 136,  acs->acs_chan_rssitotal[136]: 0
+[   43.520000] OL vap_start +
+[   43.520000] VDEV START
+[   43.530000] OL vap_start -
+[   43.530000] ol_ath_vap_set_param: Now supported MGMT RATE is 6000(kbps) and rate code: 0x3
+[   43.540000] ol_vdev_start_resp_ev for vap 0 (85e9e000)
+[   43.540000] send_wmm_update_cmd_non_tlv:
+[   43.550000] ol_if_dfs_configure: called
+[   43.550000] ol_if_dfs_configure: ETSI domain
+[   43.550000] ol_if_dfs_disable: called
+[   43.550000] ol_if_dfs_enable: called
+[   45.180000] __ieee80211_smart_ant_init: Smart Antenna is not supported
+[   50.080000] br-lan: port 3(ath1) entered forwarding state
+[   52.240000] br-lan: port 4(ath0) entered forwarding state
+[   52.680000] br-lan: port 1(eth0) entered forwarding state
+[  105.760000] cac_timeout cac expired, chan 5500 curr time 4294773
+[  105.760000] su bfee 0 mu bfee 0 su bfer 0 mu bfer 0 impl bf 0 sounding dim 0
+[  105.760000] send_vdev_up_cmd_non_tlv for vap 0 (85e9e000)
+[  105.760000] __ieee80211_smart_ant_init: Smart Antenna is not supported

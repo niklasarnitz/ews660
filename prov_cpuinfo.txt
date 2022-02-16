@@ -1,0 +1,16 @@
+system type		: Qualcomm Atheros QCA9558 rev 0
+machine			: Senao EWS660AP
+processor		: 0
+cpu model		: MIPS 74Kc V5.0
+BogoMIPS		: 358.80
+wait instruction	: yes
+microsecond timers	: yes
+tlb_entries		: 32
+extra interrupt vector	: yes
+hardware watchpoint	: yes, count: 4, address/irw mask: [0x0000, 0x0ff8, 0x0ff8, 0x0ff8]
+ASEs implemented	: mips16 dsp
+shadow register sets	: 1
+kscratch registers	: 0
+core			: 0
+VCED exceptions		: not available
+VCEI exceptions		: not available

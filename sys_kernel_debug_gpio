@@ -1,0 +1,4 @@
+GPIOs 0-23, ath79:
+ gpio-14  (wlan_2g_led         ) out lo
+ gpio-15  (wlan_5g_led         ) out lo
+ gpio-21  (SWRST button        ) in  hi

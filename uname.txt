@@ -1,0 +1,1 @@
+Linux EWS660AP 3.3.8 #1 Thu Sep 20 14:53:21 CST 2018 mips GNU/Linux
