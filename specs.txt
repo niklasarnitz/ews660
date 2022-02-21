@@ -1,0 +1,33 @@
+CPU1: Qualcomm Atheros QCA9558 rev 0 (720 MHz)
+FLA1: see flash chip, 16 MiB 
+RAM1: see ram chip, 128 MiB
+
+WI1 chip: 
+WI2 chip:
+
+ETH chip1:
+ETH chip2:
+
+wifi pn 5816a0898010
+
+flash chip: mxic MX25l12845EMI-10G -> 16 MiB
+ram chip: Nanya NT5TU32M16DG-AC × 2 -> 128 MiB
+
+Serial Settings: 115200
+
+GPIO:
+gpio-14: wlan_2g_led (out, lo)
+gpio-15: wlan_5g_led (out, lo)
+gpio-21: swrst button (in, hi)
+
+Flash Layout:
+dev:    size   erasesize  name
+mtd0: 00040000 00010000 "u-boot"
+mtd1: 00010000 00010000 "u-boot-env"
+mtd2: 00050000 00010000 "custom"
+mtd3: 00180000 00010000 "kernel"
+mtd4: 00b50000 00010000 "rootfs"
+mtd5: 001f0000 00010000 "rootfs_data"
+mtd6: 00280000 00010000 "failsafe"
+mtd7: 00010000 00010000 "ART"
+mtd8: 00cd0000 00010000 "firmware"
